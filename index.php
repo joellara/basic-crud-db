@@ -24,8 +24,9 @@
                 $error .= "Please enter a Student ID<br>";
                 $valid = false;
             }
-            if (empty($birthdate)) {
+            if (empty($birthDate)) {
                 $error .= "Please enter your Birthdate<br>";
+                $error .= "$birthDate <br>";
                 $valid = false;
             }
             if($valid){
@@ -90,25 +91,25 @@
             <div class="row">
                 <div class="six columns">
                     <label for="firstName">Your first name</label>
-                    <input class="u-full-width" name="firstName" type="text" placeholder="Pepe" id="firstName">  
+                    <input class="u-full-width" name="firstName" type="text" value="<?php if(!empty($firstName))echo $firstName; ?>" placeholder="Pepe" id="firstName">  
                 </div>
                 <div class="six columns">
                     <label for="lastName">Your last name</label>
-                    <input class="u-full-width" name="lastName" type="text" placeholder="El Toro" id="lastName">
+                    <input class="u-full-width" name="lastName" type="text" value="<?php if(!empty($lastName))echo $lastName; ?>" placeholder="El Toro" id="lastName">
                 </div>
             </div>
             <div class="row">
                 <div class="six columns">
                     <label for="matricula">Your student ID</label>
-                    <input class="u-full-width" name="matricula" type="text" placeholder="A0137469" id="matricula">
+                    <input class="u-full-width" name="matricula" type="text" value="<?php if(!empty($matricula))echo $matricula; ?>" placeholder="A0137469" id="matricula">
                 </div>
                 <div class="six columns">
                     <label for="birthdate">Your birthdate</label>
-                    <input class="u-full-width" type="date" name="birthdate" id="birthdate">
+                    <input class="u-full-width" type="date" name="birthdate" value="<?php if(!empty($birthdate))echo $birthdate; ?>" id="birthdate">
                 </div>
             </div>
             <label for="email">Your email</label>
-            <input class="u-full-width" type="email" name="email" placeholder="hola@email.com" id="email" value="<?php if(!empty($email))echo $email; ?>"required>
+            <input class="u-full-width" type="email" name="email" placeholder="hola@email.com" id="email" value="<?php if(!empty($email))echo $email; ?>" required>
             <input class="button-primary" type="submit" value="Submit">
     </form>
   </div>
