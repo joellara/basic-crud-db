@@ -1,7 +1,7 @@
 <?php
-    $host = "localhost:3307";
+    $host = "159.203.247.253";
     $user = "root";
-    $password = "Jolaqu950804.";
-    $datbase = "mastertodo";
+    $password = "hello";
+    $datbase = "todoListMaster";
     $mysqli = new mysqli($host, $user, $password, $datbase);
 ?>

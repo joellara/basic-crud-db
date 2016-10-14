@@ -48,13 +48,7 @@
     </div>
     <div class="row">
       <div class="one column">
-        <?php
-            $sql_query="SELECT * FROM student";
-            $result = $mysqli->query($sql_query);
-            while ($row = $result->fetch_assoc()) {
-                echo '<p>'. $row['studentName'].'</p>';
-            }
-        ?>
+      
       </div>
     </div>
   </div>
