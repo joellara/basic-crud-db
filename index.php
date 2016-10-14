@@ -36,21 +36,33 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-        <div class="eleven column" style="margin-top: 5%">
+        <div class="eleven columns" style="margin-top: 5%">
             <h1>Database System Project by</h1>  
             <h3>Joel Lara,Esteban Gil, Daniel Sada</h3>
         </div>  
     </div>
     <div class="row">
-        <div class="eleven column">
+        <div class="eleven columns">
             <h1>Dr. Vallejo</h1>
         </div>
     </div>
-    <div class="row">
-      <div class="one column">
-      
-      </div>
-    </div>
+    <form method="post" action="login.php">
+            <div class="row">
+                <div class="six columns">
+                    <label for="firstName">Your first name</label>
+                    <input class="u-full-width" name="firstName" type="text" placeholder="Pepe" id="firstName">  
+                </div>
+                <div class="six columns">
+                    <label for="lastName">Your last name</label>
+                    <input class="u-full-width" name="lastName" type="text" placeholder="El Toro" id="lastName">
+                </div>
+            </div>
+            <label for="birthdate">Your birthdate</label>
+            <input class="u-full-width" type="date" name="birthdate" id="birthdate">
+            <label for="email">Your email</label>
+            <input class="u-full-width" type="email" name="email" placeholder="hola@email.com" id="email">
+            <input class="button-primary" type="submit" value="Submit">
+    </form>
   </div>
 </body>
 </html>
