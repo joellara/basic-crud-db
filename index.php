@@ -64,6 +64,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -78,16 +79,16 @@
     <div class="row">
         <div class="eleven columns" style="margin-top: 5%">
             <h1>Database System Project by</h1>  
-            <h3>Joel Lara,Esteban Gil, Daniel Sada</h3>
+            <h2>Joel Lara,Esteban Gil, Daniel Sada</h3>
         </div>  
     </div>
     <div class="row">
         <div class="eleven columns">
-            <h1>Dr. Vallejo</h1>
+            <h4>Login</h4>
         </div>
     </div>
     <form method="post" action="index.php">
-            <p style="color:red"> <?php if(!empty($error))echo $error; ?> </p>
+            <p class="error"> <?php if(!empty($error))echo $error; ?> </p>
             <div class="row">
                 <div class="six columns">
                     <label for="firstName">Your first name</label>
@@ -101,7 +102,7 @@
             <div class="row">
                 <div class="six columns">
                     <label for="matricula">Your student ID</label>
-                    <input class="u-full-width" name="matricula" type="text" value="<?php if(!empty($matricula))echo $matricula; ?>" placeholder="A0137469" id="matricula">
+                    <input class="u-full-width" name="matricula" type="text" value="<?php if(!empty($matricula))echo $matricula; ?>" placeholder="0137469" id="matricula">
                 </div>
                 <div class="six columns">
                     <label for="birthdate">Your birthdate</label>
