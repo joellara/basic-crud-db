@@ -86,7 +86,8 @@
   <div class="container">
     <div class="row">
         <div class="eleven columns" style="margin-top: 5%">
-            <h1>Todo's of <?php echo $nombre ?></h1>  
+            <h1>Todo's </h1>
+            <h4><?php echo $nombre ?></h4>  
         </div>  
     </div>
     <p class="error"> <?php if(!empty($error))echo $error; ?> </p>
