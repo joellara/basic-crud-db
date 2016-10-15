@@ -1,5 +1,13 @@
 <?php 
     include_once 'db_config.php';
+    $matricula = $_GET['matricula'];
+
+    $sql = "SELECT * FROM student where studentID = '".$matricula."'";
+    $result = $mysqli->query($sql);
+    while ($todo = $result->fetch_assoc()) {
+      $studentName = $todo['studentName'];
+      $email = $todo['email'];
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +49,23 @@
             <h3>Joel Lara,Esteban Gil, Daniel Sada</h3>
         </div>  
     </div>
-    <?php echo json_encode($_GET) ?>
+    <?php if(!empty($studentName))echo $studentName; ?>
+    <br>
+    <?php if(!empty($email))echo $email; ?>
+    <br>
+    <?php if(!empty($matricula))echo $matricula; ?>
+    <br><br><br>
+    <?php 
+      include_once 'db_config.php';
+      $sql = "SELECT * FROM studentNormalTask where studentID = '".$matricula."'";
+      $result = $mysqli->query($sql);
+      echo $sql;
+      while ($todo = $result->fetch_assoc()) {
+        echo $normalTaskID = $todo['normalTaskID']."  ";
+        echo $taskDescription = $todo['taskDescription']."<br>";
+        echo "lol";
+      }
+  ?>
   </div>
 </body>
 </html>
